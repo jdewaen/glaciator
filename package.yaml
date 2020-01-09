@@ -2,7 +2,7 @@ name:                glaciator
 version:             0.1.0.0
 github:              "githubuser/glaciator"
 license:             BSD3
-author:              "Author name here"
+author:              "Jorik De waen"
 maintainer:          "example@example.com"
 copyright:           "2020 Author name here"
 
@@ -24,9 +24,17 @@ dependencies:
 
 library:
   source-dirs: src
+  dependencies:
+    - amazonka
+    - amazonka-s3
+    - path
+    - path-io
+    - cryptohash
+    - bytestring
+    - hexstring
 
 executables:
-  glaciator-exe:
+  glaciator:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
